@@ -3,7 +3,7 @@ import { IoLogoInstagram } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
 const Topbar = () => {
   return (
-    <div className="bg-Asan-Shop-red text-white">
+    <div className="bg-Tashil-red text-white">
       <div className=" container mx-auto flex justify-between items-center py-1 px-1">
         <div className=" hidden md:flex flex-wrap h-10 items-center space-x-4">
           <a href="#" className="hover:text-gray-300">

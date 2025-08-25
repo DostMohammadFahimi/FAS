@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: { 
       colors:{
-        "Asan-Shop-red":"#ea2e0e"
+        "Tashil-red":"#ea2e0e"
       }
     },
   },
