@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
 
 const selectedProduct = {
   name: "Stylish Jacket",
@@ -36,8 +37,28 @@ const ProductDetails = () => {
 
   const handleQuantityChange = (action) => {
     if (action === "plus") setQuantity((prev) => prev + 1);
-    if (action === "minus" && quantity > 1 ) setQuantity((prev) => prev - 1);
+    if (action === "minus" && quantity > 1) setQuantity((prev) => prev - 1);
   };
+
+  const handleAddToCart = () => {
+    if (!selectedColor || !selectedSize) {
+      toast.error(
+        "please select a color and size berfor the adding to the cart.",
+        { duration: 1000 }
+      );
+      return;
+    }
+
+    setIsButtonDisabled(true);
+
+    setTimeout(() => {
+      toast.success("Product added to cart", {
+        duration: 1000,
+      });
+      setIsButtonDisabled(false);
+    }, 500);
+  };
+
   return (
     <div className="p-6">
       <div className="max-w-6xl bg-white mx-auto p-8 rounded-lg">
@@ -149,8 +170,16 @@ const ProductDetails = () => {
                 </button>
               </div>
             </div>
-            <button className="bg-black text-white py-2 px-6 rounded w-full mb-4">
-              ADD TO CART
+            <button
+              onClick={handleAddToCart}
+              disabled={isButtonDisabled}
+              className={`bg-black text-white py-2 px-6 rounded w-full mb-4 ${
+                isButtonDisabled
+                  ? "cursor-not-allowed opacity-50"
+                  : "hover:bg-gray-900"
+              }`}
+            >
+              {isButtonDisabled ? "Adding..." : "ADD TO CART"}
             </button>
             <div className="mt-10 text-gray-700">
               <h3 className="text-xl font-bold mb-4">Characteristcs:</h3>
