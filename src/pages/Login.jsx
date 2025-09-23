@@ -8,13 +8,16 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("User Registered:", {email, password });
+    console.log("User Registered:", { email, password });
   };
 
   return (
     <div className="flex">
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-8 md:p-12">
-        <form onSubmit={handleSubmit} className="w-full max-w-md bg-white p-8 reounded-lg border shadow-sm">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full max-w-md bg-white p-8 reounded-lg border shadow-sm"
+        >
           <div className="flex justify-center mb-6">
             <h1 className="text-xl font-bold">Tashil</h1>
           </div>

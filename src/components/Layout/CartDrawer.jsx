@@ -21,8 +21,12 @@ const CartDrawer = ({ drawerOpen, toggleCartDrawer }) => {
       </div>
       {/* {cheakout fixed at the buttom } */}
       <div className="p-4 bg-white sticky bottom-0">
-        <button className="w-full bg-black text-white rounded-lg py-3 font-semiblod hover:bg-gray-800 tansition">Checkout</button>
-        <p className="text-sm tracking-tighter text-gray-500 mt-2 text-center">Shipping , taxes and discount codes calculated at Checkout.</p>
+        <button className="w-full bg-black text-white rounded-lg py-3 font-semiblod hover:bg-gray-800 tansition">
+          Checkout
+        </button>
+        <p className="text-sm tracking-tighter text-gray-500 mt-2 text-center">
+          Shipping , taxes and discount codes calculated at Checkout.
+        </p>
       </div>
     </div>
   );
