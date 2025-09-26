@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
         <div className="space-x-6 md:flex hidden">
           <Link
-            to="#"
+            to="/collections/all"
             className="text-gray-700 text-lg font-medium uppercase hover:text-black"
           >
             MEN
